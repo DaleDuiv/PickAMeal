@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick-A-Meal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/css/stylemain.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/Pick-A-Meal.jpg">
+</head>
+<body>
+  <header>
+      <div class = "header-container card-panel" style= background-image:url(./assets/images/various-spices-and-herbs-website-header.jpg)>
+        <img class="logo" src="./assets/images/Pick-A-Meal.jpg">
+      </div>
+    </header>
+  <main class="container" style="border: 2px dotted">
+      <div class="row">
+          <section id="search-wrapper" class="col s12 m3 l3" style="border: 2px dotted">
+              <input placeholder="Search by Keyword" id="keyword-input" type="text" class="validate">
+              <a id="search-button" class="waves-effect waves-light btn">Search</a>
+              <h2>Type of meal</h2>
+              <form action="#" id="mealtime-filter">
+                <div class="filter-container">
+                    <label>
+                        <input type="checkbox" id="main-course"/>
+                        <span>Main Course</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="side-dish"/>
+                        <span>Side dish</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="dessert"/>
+                        <span>Dessert</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="appetizer"/>
+                        <span>Appetizer</span>
+                    </label>
+                </div>
+                <div class="filter-container">
+                    <label>
+                        <input type="checkbox" id="breakfast"/>
+                        <span>Breakfast</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="soup"/>
+                        <span>Soup</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="beverage"/>
+                        <span>Beverage</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="sauce"/>
+                        <span>Sauce</span>
+                    </label>
+                </div>
+              </form>
+              
+              <h2>Cuisine</h2>
+              <form action="#" id="mealtime-filter">
+                <div class="filter-container">
+                    <label>
+                        <input type="checkbox" id="chinese"/>
+                        <span>Chinese</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="japanese"/>
+                        <span>Japanese</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="thai"/>
+                        <span>Thai</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="indian"/>
+                        <span>Indian</span>
+                    </label>
+                </div>
+                <div class="filter-container">
+                    <label>
+                        <input type="checkbox" id="korean"/>
+                        <span>Korean</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="italian"/>
+                        <span>Italian</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="mexican"/>
+                        <span>Mexican</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="american"/>
+                        <span>American</span>
+                    </label>
+                </div>
+              </form>
+              <h2>Intolerance / Allergy</h2>
+              <form action="#" id="mealtime-filter">
+                <div class="filter-container">
+                    <label>
+                        <input type="checkbox" id="dairy"/>
+                        <span>Dairy</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="gluten"/>
+                        <span>Gluten</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="peanuts"/>
+                        <span>Peanuts</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="seafood"/>
+                        <span>Seafood</span>
+                    </label>
+                </div>
+                <div class="filter-container">
+                    <label>
+                        <input type="checkbox" id="egg"/>
+                        <span>Egg</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="shellfish"/>
+                        <span>Shellfish</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="soy"/>
+                        <span>Soy</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="wheat"/>
+                        <span>Wheat</span>
+                    </label>
+                </div>
+              </form>
+            
+              <a class="waves-effect waves-light btn">Apply filters</a>              
+          </section>
+
+          <section id="search-result" style="border: 2px dotted">              
+            <div class="col s12 m6 l6 recipe-item">
+              <div class="card horizontal" id="card-1" >
+                <a id="a-1" href="">
+                  <img  style=" height: 100%;" id="image-card-content-1">
+                </a>
+                <div class="card-content teal" id="card-content-1">
+                  <i id='star-1' class = 'fa-regular fa-star star'></i>
+                  <span class="card-title" id="title-card-1"></span>
+                  <blockquote id="card-summary-1"></blockquote>
+                </div>    
+              </div>
+            </div>
+
+            <div class="col s12 m6 l6 recipe-item">
+              <div class="card horizontal" id="card-2">
+                <a id="a-2" href="">
+                  <img  style="height: 100%;" id="image-card-content-2">
+                </a>
+                <div class="card-content teal" id="card-content-2">
+                  <i id='star-2' class = 'fa-regular fa-star star'></i>
+                  <span class="card-title" id="title-card-2"></span>
+                  <blockquote id="card-summary-2"></blockquote>
+                </div>    
+              </div>
+            </div>
+
+            <div class="col s12 m6 l6 recipe-item">
+              <div class="card horizontal" id="card-3">
+                <a id="a-3" href="">
+                  <img style=" height: 100%" id="image-card-content-3">
+                </a> 
+                <div class="card-content teal" id="card-content-3">
+                  <i id='star-3' class = 'fa-regular fa-star star'></i>
+                  <span class="card-title" id="title-card-3"></span>
+                  <blockquote id="card-summary-3"></blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6 l6 recipe-item">
+              <div class="card horizontal" id="card-4">
+                <a id="a-4" href="">
+                  <img  style=" height: 100%;"  id="image-card-content-4">
+                </a>
+                <div class="card-content teal" id="card-content-4">
+                  <i id='star-4' class = 'fa-regular fa-star star'></i>
+                  <span class="card-title" id="title-card-4"></span>
+                  <blockquote id="card-summary-4"></blockquote>
+                </div> 
+              </div>      
+            </div>                      
+          </section>
+
+          <section class="col s12 m12 l3" style="border: 2px dotted">
+            <aside id="favourites" class="aside">
+                <h5>My favourites</h5>
+                <div id="favourite-items">
+                    <!-- render favourite items in here -->
+                </div>
+            </aside>
+          </section>
+      </div>
+  </main>
+
+  <div class="footer">
+    <div id="button"></div>
+  <div id="container">
+  <div id="cont">
+  <div class="footer_center">
+    <h3>© Copyright 2022 Pick-A-Meal Pty Ltd</h3>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <!--script src="./assets/temp.js"></script-->
+
+  <!-- model forms  -->
+  <div id="input-message" class="modal">
+    <div class="modal-content">
+      <h4>Input Information</h4>
+      <p>Please input the Recipe you would like to search in the "Search by Keyword" field and click "Search" to search the recipes.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+  <div id="no-result" class="modal">
+    <div class="modal-content">
+      <h4>No Search Result</h4>
+      <p>Sorry that we cannot find any recipe matching your keyword.  Please try another keyword to make a search.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+</body>
+</html>
